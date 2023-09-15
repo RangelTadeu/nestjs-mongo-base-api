@@ -25,9 +25,11 @@ export class MongoGenericRepository<T> implements IGenericRepository<T> {
   getAll(): IQueryHelper {
     return this.buildQueryHelper();
   }
+
   get(filter: any, projection?: any, options?: any): IQueryHelper {
     return this.buildQueryHelper({ filter, projection, options });
   }
+
   getOne(id: string): Promise<T> {
     return this._repository.findById(id, this._populateOnFind).exec();
   }
