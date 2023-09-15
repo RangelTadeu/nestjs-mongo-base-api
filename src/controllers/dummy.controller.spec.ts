@@ -12,10 +12,4 @@ describe('AppController', () => {
 
     dummyController = app.get<DummyController>(DummyController);
   });
-
-  describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(dummyController.getHello()).toBe('Hello World!');
-    });
-  });
 });
