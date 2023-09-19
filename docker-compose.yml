@@ -8,7 +8,7 @@ services:
     volumes:
       - .:/usr/src/app
     ports:
-      - 3030:3001
+      - 3030:3000
       - 9220:9229
     restart: on-failure
     env_file:
