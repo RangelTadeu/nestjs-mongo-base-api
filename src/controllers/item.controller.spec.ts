@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { DummyController } from './dummy.controller';
+import { ItemController } from './item.controller';
 
 describe('AppController', () => {
-  let dummyController: DummyController;
+  let itemController: ItemController;
 
   beforeEach(async () => {
     const app: TestingModule = await Test.createTestingModule({
-      controllers: [DummyController],
+      controllers: [ItemController],
       providers: [],
     }).compile();
 
-    dummyController = app.get<DummyController>(DummyController);
+    itemController = app.get<ItemController>(ItemController);
   });
 });

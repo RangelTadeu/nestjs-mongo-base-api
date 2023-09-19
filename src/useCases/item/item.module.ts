@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { DummyUseCase } from './dummy.use-case';
+import { ItemUseCase } from './item.use-case';
 import { DataServiceModule } from '../../services/data-service/data-service.module';
 
 @Module({
   imports: [DataServiceModule],
-  providers: [DummyUseCase],
-  exports: [DummyUseCase],
+  providers: [ItemUseCase],
+  exports: [ItemUseCase],
 })
-export class DummyUseCasesModule {}
+export class ItemUseCasesModule {}

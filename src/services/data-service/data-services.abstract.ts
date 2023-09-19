@@ -1,6 +1,6 @@
-import { Dummy } from '../../core/entities/dummy.entity';
+import { Item } from '../../core/entities/item.entity';
 import { IGenericRepository } from './generic-repository.abstract';
 
 export abstract class IDataServices {
-  abstract dummies: IGenericRepository<Dummy>;
+  abstract items: IGenericRepository<Item>;
 }

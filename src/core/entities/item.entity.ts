@@ -1,4 +1,4 @@
-export class Dummy {
+export class Item {
   _id: string;
   name: string;
 }
