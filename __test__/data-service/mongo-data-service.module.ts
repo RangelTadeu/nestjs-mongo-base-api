@@ -3,9 +3,10 @@ import { MongoClient } from 'mongodb';
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import { IDataServices } from '../../src/services/data-service/data-services.abstract';
 import { MongoDataService } from '../../src/infra/data-service/mongo/mongo-data.service';
+import { DB } from '../../src/core/constants';
 
 const mongodb = {
-  provide: 'DB',
+  provide: DB,
   scope: Scope.DEFAULT,
   useFactory: async () => {
     const mongod = await MongoMemoryServer.create();

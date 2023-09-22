@@ -2,9 +2,10 @@ import { Module, Scope } from '@nestjs/common';
 import { IDataServices } from '../../../services/data-service/data-services.abstract';
 import { MongoDataService } from './mongo-data.service';
 import { MongoClient } from 'mongodb';
+import { DB } from '../../../core/constants';
 
 const mongodb = {
-  provide: 'DB',
+  provide: DB,
   scope: Scope.DEFAULT,
   useFactory: async () => {
     const connection = await MongoClient.connect(process.env.MONGO_URL);
